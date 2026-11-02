@@ -1,0 +1,59 @@
+{
+  "name": "supabase-fetch-all",
+  "version": "0.1.0",
+  "description": "Read every row of a Supabase (PostgREST) query past the silent 1,000-row cap, with a stable order and loud errors instead of partial results.",
+  "keywords": [
+    "supabase",
+    "postgrest",
+    "pagination",
+    "max-rows",
+    "range",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "Manoj Kumar (https://manojkumar-ca.vercel.app)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/analystkumar29/supabase-fetch-all.git"
+  },
+  "homepage": "https://github.com/analystkumar29/supabase-fetch-all#readme",
+  "bugs": {
+    "url": "https://github.com/analystkumar29/supabase-fetch-all/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "@supabase/supabase-js": "^2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@supabase/supabase-js": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "@types/node": "^20.19.43",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.12"
+  }
+}
